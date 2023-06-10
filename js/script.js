@@ -90,3 +90,24 @@ const nav = document.querySelector(".nav"),
                     allSection[i].classList.toggle("open");
                 }
             }
+
+
+/* ========== Contact me form (EmailJS) ========== */
+
+window.onload = function() {
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+// get values from form elements
+        // these IDs from the previous steps
+        emailjs.sendForm('service_ymiob15', 'template_5jdkiik', this)
+            .then(function() {
+                window.location.href = 'thankyou.html';
+                //console.log('SUCCESS!');
+                document.getElementById('contact-form').reset();
+            }, function(error) {
+                window.location.href = 'tryagain.html';
+                //console.log('FAILED...', error);
+                document.getElementById('contact-form').reset();
+            });
+    });
+}

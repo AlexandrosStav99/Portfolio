@@ -39,6 +39,16 @@
   <link rel="stylesheet" href="css/skins/color-4.css" class="alternate-style" title="color-4" disabled>
   <link rel="stylesheet" href="css/skins/color-5.css" class="alternate-style" title="color-5" disabled>
   <link rel="stylesheet" href="css/style-switcher.css">
+
+  <!-- ==== EmailJS ====-->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+  <script type="text/javascript">
+   (function(){
+      emailjs.init("mMCN7F2rZJqgmMDNL");
+   })();
+  </script>
+
 </head>
 <body>
   <!-- ===== Main Container Start ===== -->
@@ -69,7 +79,7 @@
             <div class="home-info padd-15">
               <h3 class="hello">Hello, my name is <span class="name">Alexandros Stavrinides</span></h3>
               <h3 class="my-profession">I' m a <span class="typing">Front-End Web Developer</span></h3>
-              <p>I am a freshman Front-End web developer seeking employment opportunities. With a passion for coding and a desire to learn, I am eager to contribute to your team and grow my skills.</p>
+              <p>I am a freshman Front-End web developer seeking employment opportunities. With a passion for coding and a desire to learn, I am eager to contribute to your team and develop my skills.</p>
               <a href="Alexandros_Stavrinides CV.pdf" class="btn" download>Download CV</a>
             </div>
             <div class="home-img padd-15">
@@ -428,30 +438,30 @@
           <h3 class="contact-title padd-15">SEND ME AN EMAIL</h3>
           <!-- ====== Contact Form ====== -->
           <div class="row" >
-            <form class="contact-form padd-15" action="https://formsubmit.co/5c29daf1b493892197dcac94507e43ac" method="POST">
+            <form class="contact-form padd-15" id="contact-form"> <!-- form start-->
               <div class="row">
                 <div class="form-item col-6 padd-15">
                   <div class="form-group">
-                    <input type="text" name="name" class="form-control" placeholder="Name" required>
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Name" required>
                   </div>
                 </div>
                 <div class="form-item col-6 padd-15">
                   <div class="form-group">
-                    <input type="email"name="email" class="form-control" placeholder="Email" required>
+                    <input type="email"name="email" class="form-control" id="email" placeholder="Email" required>
                   </div>
                 </div>
               </div>
               <div class="row">
                 <div class="form-item col-12 padd-15">
                   <div class="form-group">
-                    <input type="text" action="https://alexandrosstav99.github.io/Portfolio/"  class="form-control" name="subject" placeholder="Subject" required>
+                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
                   </div>
                 </div>
               </div>
               <div class="row">
                 <div class="form-item col-12 padd-15">
                   <div class="form-group">
-                    <textarea type="text" class="form-control" name="message"  placeholder="Message" required></textarea>
+                    <textarea type="text" class="form-control" name="message" id="message" placeholder="Message" required></textarea>
                   </div>
                 </div>
               </div>
@@ -460,9 +470,7 @@
                   <button id="mail-link" type="submit" class="btn" style="cursor: pointer;" >Send Message</button>
                 </div>
               </div>
-              <input type="hidden" name="_template" value="box">
-              <input type="hidden" name="_captcha" value="false">
-            </form>
+            </form> <!-- form end -->
           </div>
         </div>
       </section>
